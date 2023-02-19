@@ -66,6 +66,7 @@ switch:
     name: "${friendly_name} Switch"
     pin: GPIO12
     id: relay
+    restore_mode: RESTORE_DEFAULT_ON
 
 time:
   - platform: sntp
