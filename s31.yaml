@@ -33,36 +33,36 @@ binary_sensor:
       number: GPIO0
       mode: INPUT_PULLUP
       inverted: True
-    name: "${name} Button"
+    name: "${friendly_name} Button"
     on_press:
       - switch.toggle: relay
 
   - platform: status
-    name: "${name} Status"
+    name: "${friendly_name} Status"
 
 sensor:
   - platform: wifi_signal
-    name: "${name} WiFi Signal"
+    name: "${friendly_name} WiFi Signal"
     update_interval: 60s
 
   - platform: cse7766
     current:
-      name: "${name} Current"
+      name: "${friendly_name} Current"
       accuracy_decimals: 1
     voltage:
-      name: "${name} Voltage"
+      name: "${friendly_name} Voltage"
       accuracy_decimals: 1
     power:
-      name: "${name} Power"
+      name: "${friendly_name} Power"
       accuracy_decimals: 1
       id: my_power
   - platform: total_daily_energy
-    name: "${name} Daily Energy"
+    name: "${friendly_name} Daily Energy"
     power_id: my_power
 
 switch:
   - platform: gpio
-    name: "${name} Switch"
+    name: "${friendly_name} Switch"
     pin: GPIO12
     id: relay
 
