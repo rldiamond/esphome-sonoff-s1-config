@@ -21,6 +21,7 @@ api:
 
 # Enable over the air updates
 ota:
+  password: ${ota_password}
 
 # Device Specific Config
 uart:
