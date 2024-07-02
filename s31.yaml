@@ -23,7 +23,6 @@ api:
 ota:
   platform: esphome
   password: ${ota_password}
-  num_attempts: 3
 
 # Device Specific Config
 uart:
